@@ -13,16 +13,50 @@
     body{
       text-align: center;
     }
+
+    .mensagem{
+      color: red;
+    }
+
+    img{
+      width: 800px;
+    
+    }
+    .texto1{
+      text-align: center;
+      color: grey;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+    }
+
+    .texto2{
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+
+    button{
+      font-family: Arial, Helvetica, sans-serif;      
+      cursor: pointer;
+    }
+
+    .botao{
+      font-family: Arial, Helvetica, sans-serif;
+      background: #B0E2FF;
+      color:#FFF;
+    }
+
   </style>
 </head>
 <body>
 
-  We are launching <b>soon!</b><br>
+  <h1>PING.</h1>
+  <p class="texto1">We are launching <b>soon!</b><br></p>
 
-  Subscribe and get notified<br>
+  <p class="texto2">Subscribe and get notified<br></p>
 
-  <input type="text" placeholder="Your email address..."> 
-  <button type="button" onclick="botao()">Notify Me</button>
+  <input type="text" placeholder="Your email address..." id="email"> 
+  <button type="button" onclick="botao()" class="botao">Notify Me</button>
   <div id="mensagem"></div> <!--aqui vai ser a mensagem de erro do usuário-->
   <br>
   <br>
@@ -41,7 +75,12 @@
 <script>
 
 function botao(){
-  
+  let email = document.getElementById("email").value;
+  if (email.includes('@')) { 
+}
+else{
+  document.getElementById("mensagem").innerHTML = 'Please provide a valid email address';
+}
 }
 
 </script>
